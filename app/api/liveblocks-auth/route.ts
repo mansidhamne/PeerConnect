@@ -7,7 +7,7 @@ import { NextRequest } from "next/server";
  */
 
 const liveblocks = new Liveblocks({
-  secret: process.env.LIVEBLOCKS_SECRET_KEY!,
+  secret: "sk_dev_Q_J5Qpc2aKKstLiNdP-dMOCq2q_H03Ss4NRc2vrk72Fol_rWxTXhuE6T8g8XRHPv",
 });
 
 export async function POST(request: NextRequest) {
