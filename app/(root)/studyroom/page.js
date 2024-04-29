@@ -129,7 +129,7 @@ const StudyRoom = () => {
             )}
             </div>
             <div className="flex flex-col gap-2">
-            <a href=""><button className="px-6 py-4 bg-blue-700 rounded-xl text-white font-semibold w-[212px]">Edit a Doc Live</button></a>
+            <a href="/study-room"><button className="px-6 py-4 bg-blue-700 rounded-xl text-white font-semibold w-[212px]">Edit a Doc Live</button></a>
                 <a href=""><button className="px-6 py-4 bg-blue-700 rounded-xl text-white font-semibold min-w-[212px]">Chat with Each Other</button></a>
             </div>
         </div>
