@@ -5,6 +5,7 @@ import { MdLogout } from 'react-icons/md';
 import { IoIosSettings } from 'react-icons/io';
 import Image from 'next/image';
 import { UserButton } from '@clerk/nextjs';
+import { useUser } from '@clerk/clerk-react';
 
 interface Link {
   id: string;
@@ -13,6 +14,8 @@ interface Link {
 }
 
 const Sidebar: React.FC = () => {
+  const { user } = useUser();
+
   return (
     <div className="bg-neutral-50 text-zinc-900 min-w-[250px] sticky top-0 min-h-full select-none">
       <div className="flex flex-col h-screen justify-between pt-7">
@@ -38,8 +41,13 @@ const Sidebar: React.FC = () => {
         </div>
         <div className="flex flex-col flex-end justify-end items-center gap-1 pb-7 text-[20px]">
           <UserButton/>
-          <h3>Vivek</h3>
-          <p>S.E. Comps</p>
+          {user ? (
+            <>
+              <h3>{user.fullName}</h3> {/* Accessing user's full name */}
+            </>
+          ) : (
+            <p>Loading...</p>
+          )}
           <div className="flex flex-row gap-4 items-center text-[23px] ">
             <IoIosSettings />
             <div>
