@@ -19,15 +19,6 @@ const EventCard = ({ event }) => {
   );
 };
 
-const HomeCard = ({ card }) => {
-  return (
-    <div className="bg-white p-4 rounded-xl shadow-md mb-4 flex flex-col text-center gap-2">
-      <h3 className="text-xl text-blue-700 font-bold">{card.name}</h3>
-      <p className="text-pretty text-lg font-semibold text-green-700">{card.desc}</p>
-    </div>
-  );
-};
-
 const Home= () => {
   const [news, setNews] = useState([]);
 
@@ -48,6 +39,7 @@ const Home= () => {
 
     fetchNews();
   }, []);
+
   const timetable = [
     {
       exam:'DAA',
@@ -90,43 +82,20 @@ const Home= () => {
     },
   ]
 
-  const cards = [
-    {
-      name: 'Study Room Updates',
-      link: '/studyroom',
-      desc: 'Collobarte with your peers and stay at the top of the game!',
-    },
-    {
-      name: 'Tech Updates',
-      link: '/',
-      desc: 'Stay updated with all recent tech news!',
-    },
-    {
-      name: 'Resources',
-      link: '/resources',
-      desc: 'Check out all required notes, ppts and previous papers',
-    },
-    {
-      name: 'Pomodoro',
-      link: '/progress',
-      desc: 'Taking a break can lead to break of thoughts!',
-    },
-  ]
-
   return (
-    <div className="flex flex-row h-screen justify-between overflow-hidden" style={{
+    <div className="flex flex-row h-screen w-full justify-between" style={{
         backgroundColor: "rgb(255, 228, 230)",
         backgroundImage: "radial-gradient(at 99% 81%, rgb(229, 229, 229) 0, transparent 79%), radial-gradient(at 54% 34%, rgb(2, 132, 199) 0, transparent 68%), radial-gradient(at 45% 59%, rgb(22, 101, 52) 0, transparent 1%), radial-gradient(at 84% 20%, rgb(232, 121, 249) 0, transparent 68%), radial-gradient(at 84% 47%, rgb(22, 163, 74) 0, transparent 1%), radial-gradient(at 55% 22%, rgb(52, 211, 153) 0, transparent 12%)"}}>
       <div className="flex flex-row gap-4 p-6">
-        <div className="grid grid-cols-2 gap-x-6 items-center">
+        <div className="grid grid-cols-2 gap-x-6 items-center ml-4">
           <div className="bg-white px-4 pt-4 mb-4 p-7 rounded-xl shadow-md flex flex-col text-center gap-2 w-[350px]">
             <h3 className="text-xl text-blue-700 font-bold">Study Room Updates</h3>
             <p className="text-pretty text-lg font-semibold text-green-700">Collobarte with your peers and stay at the top of the game!</p>
             <Image src="/studyroom.jpeg" alt="studyroom" height={20} width={350}/>
             <a href="/studyroom" target="_blank"><button className="mt-2 bg-blue-700 text-white font-semibold text-xl py-2 px-4 rounded-xl">Join Now</button></a>
           </div>
-          <div className="bg-white p-6 rounded-xl shadow-md mb-4 flex flex-col text-center gap-2 w-[350px]">
-            <h3 className="text-xl text-blue-700 font-bold pb-3">Tech Updates</h3>
+          <div className="bg-white p-5 rounded-xl shadow-md mb-3 flex flex-col text-center gap-2 w-[350px]">
+            <h3 className="text-xl text-blue-700 font-bold">Tech Updates</h3>
             <p className="text-pretty text-lg font-semibold text-green-700">Stay updated with all recent tech news!</p>
             <div className="text-left">
               {news.map((article, index) => (
@@ -141,15 +110,15 @@ const Home= () => {
             <p className="text-pretty text-lg font-semibold text-green-700">Stay Focused! Achieve your goals!</p>
             <a href="/progress" target="_blank"><button className="mt-2 bg-blue-700 text-white font-semibold text-xl py-2 px-4 rounded-xl">Start Now</button></a>
           </div>
-          <div className="bg-white p-4 rounded-xl shadow-md mb-4 flex flex-col text-center gap-2 w-[350px]">
+          <div className="bg-white p-3 rounded-xl shadow-md mb-3 flex flex-col text-center gap-2 w-[350px]">
             <h3 className="text-xl text-blue-700 font-bold">Resources</h3>
             <p className="text-pretty text-lg font-semibold text-green-700">Check out all required notes, ppts and previous papers</p>
             <a href="/resources" target="_blank"><button className="mt-2 bg-blue-700 text-white font-semibold text-xl py-2 px-4 rounded-xl">Check It Out</button></a>
           </div>
         </div>
       </div>
-      <div className="flex flex-col bg-slate-50 items-center w-[400px] border-l-2 gap-4">
-        <div className="w-full">
+      <div className="flex flex-col bg-slate-50 items-center min-w-[370px] border-l-2 gap-4">
+        <div className="">
           <h2 className="text-center text-xl font-bold w-full py-4">ESE TimeTable 2024</h2>
             <Table>
               <TableHeader>
