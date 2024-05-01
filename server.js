@@ -7,7 +7,7 @@ const app = express();
 const port = 3001;
 
 const MODEL_NAME = "gemini-1.5-pro-latest";
-const API_KEY = "AIzaSyD5HXqENGxoVDvZiw3nU23Pj-eqj2pTTFA";
+const API_KEY = "YOUR API KEY";
 
 // Initialize GoogleGenerativeAI
 const genAI = new GoogleGenerativeAI(API_KEY);
