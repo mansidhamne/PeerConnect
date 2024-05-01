@@ -52,8 +52,8 @@ const MainCommunityCard = ({ community, onAddCommunity, onRemoveCommunity }) => 
   };
 
   return (
-    <div className="bg-white p-4 rounded-lg shadow-md mb-4 w-[400px] flex flex-row gap-3">
-      <Image src={community.image} width={60} height={20} alt="ai"/>
+    <div className="bg-white p-4 rounded-lg shadow-md mb-4 w-[400px] flex flex-row gap-3 m-h-screen">
+      {/* <Image src={community.image} width={60} height={20} alt="ai"/> */}
       <div className="flex flex-col gap-1 justify-between">
         <h3 className="text-lg font-semibold text-gray-800">{community.name}</h3>
         <p className="text-sm text-gray-600">{community.description}</p>
@@ -129,8 +129,8 @@ const StudyRoom = () => {
             )}
             </div>
             <div className="flex flex-col gap-2">
-            <a href=""><button className="px-6 py-4 bg-blue-700 rounded-xl text-white font-semibold w-[212px]">Edit a Doc Live</button></a>
-                <a href=""><button className="px-6 py-4 bg-blue-700 rounded-xl text-white font-semibold min-w-[212px]">Chat with Each Other</button></a>
+            <a href="/study-room" target="_blank"><button className="px-6 py-4 bg-blue-700 rounded-xl text-white font-semibold w-[212px]">Edit a Doc Live</button></a>
+            <a href="/study-room" target="_blank"><button className="px-6 py-4 bg-blue-700 rounded-xl text-white font-semibold min-w-[212px]">Chat with Each Other</button></a>
             </div>
         </div>
         </div>

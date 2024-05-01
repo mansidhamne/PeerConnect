@@ -17,7 +17,7 @@
   }
   
   .card {
-    background-image: linear-gradient(to left, rgb(243, 232, 255), rgb(241, 245, 249), rgb(216, 180, 254));
+    background-color: #f8fafc;
     padding: 20px;
     border-radius: 8px;
     min-width: 350px;

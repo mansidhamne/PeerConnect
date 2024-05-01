@@ -1,3 +1,4 @@
+'use client'
 import React from 'react';
 import { SidebarLinks } from '@/constants';
 import { MdLogout } from 'react-icons/md';
@@ -13,7 +14,7 @@ interface Link {
 
 const Sidebar: React.FC = () => {
   return (
-    <section className="bg-neutral-50 text-zinc-900 min-w-[250px] sticky top-0 min-h-full select-none">
+    <div className="bg-neutral-50 text-zinc-900 min-w-[250px] sticky top-0 min-h-full select-none">
       <div className="flex flex-col h-screen justify-between pt-7">
         <div className="flex flex-col top-0">
           <div className="flex flex-row justify-center pl-4">
@@ -36,8 +37,8 @@ const Sidebar: React.FC = () => {
           </div>
         </div>
         <div className="flex flex-col flex-end justify-end items-center gap-1 pb-7 text-[20px]">
-          <UserButton />
-          <h3>Name XYZ</h3>
+          <UserButton/>
+          <h3>Vivek</h3>
           <p>S.E. Comps</p>
           <div className="flex flex-row gap-4 items-center text-[23px] ">
             <IoIosSettings />
@@ -47,7 +48,7 @@ const Sidebar: React.FC = () => {
           </div>
         </div>
       </div>
-    </section>
+    </div>
   );
 };
 

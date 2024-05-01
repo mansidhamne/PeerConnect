@@ -9,7 +9,6 @@ interface BlogContent {
   title: string;
   description: string;
   image: string;
-  authorAvatar: string;
   faculty: string;
   syllabus: string
 }
@@ -21,7 +20,6 @@ interface Props {
   title: string;
   description: string;
   image: string;
-  authorAvatar: string;
   faculty:string;
   syllabus:string;
   description1:string;
@@ -48,7 +46,6 @@ export function FollowingPointerDemoPast({
   description4,
   date4,
   image,
-  authorAvatar,
   faculty,
   syllabus
 }: Props) {
@@ -58,7 +55,6 @@ export function FollowingPointerDemoPast({
         title={
           <TitleComponent
             title={author}
-            avatar={authorAvatar}
           />
         }
       >
@@ -77,13 +73,7 @@ export function FollowingPointerDemoPast({
               {title}
             </h2>
             
-            <Image
-      src={authorAvatar}
-      height="20"
-      width="20"
-      alt="avatar"
-      className="rounded-full border-2 border-white"
-    />       <div>
+            <div>
             <div className="flex justify-between items-center">
             <h2 className="font-normal my-4 text-sm text-cyan-500">
               {description1}
@@ -127,19 +117,10 @@ export function FollowingPointerDemoPast({
 
 const TitleComponent = ({
   title,
-  avatar,
 }: {
   title: string;
-  avatar: string;
 }) => (
   <div className="flex space-x-2 items-center">
-    <Image
-      src={avatar}
-      height="20"
-      width="20"
-      alt="avatar"
-      className="rounded-full border-2 border-white"
-    />
     <p>{title}</p>
   </div>
 );

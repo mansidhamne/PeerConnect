@@ -1,5 +1,5 @@
-import "../../styles/globals.css"
-import "../../styles/text-editor.css"
+import "../../../styles/globals.css"
+import "../../../styles/text-editor.css"
 import { Suspense } from "react";
 
 export const metadata = {

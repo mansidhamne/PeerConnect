@@ -3,6 +3,7 @@
 import React, { useState, useEffect } from 'react';
 import ReactMarkdown from 'react-markdown';
 import ChatMessage from './ChatMessage';
+import '../../globals.css';
 
 function ChatApp() {
   const [messages, setMessages] = useState([]);
@@ -46,7 +47,7 @@ function ChatApp() {
   };
 
   return (
-    <div className="flex flex-col h-screen bg-slate-800 w-full">
+    <div className="flex flex-col h-screen bg-slate-800 w-[1200px]">
       <div className="flex-grow overflow-y-auto p-4">
         {messages.map((message, index) => (
             <ChatMessage key={index} role={message.role} message={message.message}>

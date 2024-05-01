@@ -116,7 +116,9 @@ function App() {
   };
 
   return (
-    <div className="flex flex-row justify-between">
+    <div className="flex flex-row justify-between overflow-y-auto h-full" style={{
+      backgroundColor: "rgb(212, 212, 216)",
+      backgroundImage: "radial-gradient(at 17% 69%, rgb(199, 210, 254) 0, transparent 80%), radial-gradient(at 3% 92%, rgb(254, 202, 202) 0, transparent 67%), radial-gradient(at 30% 53%, rgb(68, 64, 60) 0, transparent 90%), radial-gradient(at 40% 35%, rgb(5, 150, 105) 0, transparent 61%), radial-gradient(at 29% 88%, rgb(131, 24, 67) 0, transparent 60%), radial-gradient(at 75% 30%, rgb(237, 233, 254) 0, transparent 79%)"}}>
       <div className="layout__wrapper">
         <div className="card">
             <DragDropContext onDragEnd={handleDragAndDrop}>
@@ -153,7 +155,7 @@ function App() {
             <ProgressBar progress={progress} />
         </div>
         </div>
-        <div className="flex flex-col items-center gap-4">
+        <div className="flex flex-col items-center gap-4 mr-5">
             <PomodoroTimer/>
             <CalendarPage />
         </div>
@@ -200,7 +202,7 @@ function StoreList({ name, items, id, onAddTask, onDeleteTask }) {
               )}
               {provided.placeholder}
             </div>
-            <div className="add-task-container flex flex-row justify-between p-2 bg-gradient-to-l from-purple-100 via-slate-100 to-purple-300">
+            <div className="add-task-container flex flex-row justify-between p-2  bg-slate-50">
               <input
                 className="bg-inherit"
                 type="text"

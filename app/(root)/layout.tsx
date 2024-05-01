@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
-import "./globals.css";
+import "../globals.css";
 import { ClerkProvider, SignInButton, SignedIn, SignedOut, UserButton } from '@clerk/nextjs'
 import Sidebar from "@/components/Sidebar";
 
@@ -18,13 +18,10 @@ export default function RootLayout({
 }>) {
   return (
    
-      <html lang="en">
-        <body>
-        <section className="flex h-full flex-row">
+        <div className="flex h-full w-full fixed flex-row">
           <Sidebar />
         {children}
-      </section>
-        </body>
-      </html>
+      </div>
+        
   );
 }

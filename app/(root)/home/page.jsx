@@ -114,7 +114,7 @@ const Home= () => {
   ]
 
   return (
-    <div className="flex flex-row w-full h-screen justify-between overflow-hidden" style={{
+    <div className="flex flex-row h-screen justify-between overflow-hidden" style={{
         backgroundColor: "rgb(255, 228, 230)",
         backgroundImage: "radial-gradient(at 99% 81%, rgb(229, 229, 229) 0, transparent 79%), radial-gradient(at 54% 34%, rgb(2, 132, 199) 0, transparent 68%), radial-gradient(at 45% 59%, rgb(22, 101, 52) 0, transparent 1%), radial-gradient(at 84% 20%, rgb(232, 121, 249) 0, transparent 68%), radial-gradient(at 84% 47%, rgb(22, 163, 74) 0, transparent 1%), radial-gradient(at 55% 22%, rgb(52, 211, 153) 0, transparent 12%)"}}>
       <div className="flex flex-row gap-4 p-6">
@@ -123,10 +123,10 @@ const Home= () => {
             <h3 className="text-xl text-blue-700 font-bold">Study Room Updates</h3>
             <p className="text-pretty text-lg font-semibold text-green-700">Collobarte with your peers and stay at the top of the game!</p>
             <Image src="/studyroom.jpeg" alt="studyroom" height={20} width={350}/>
-            <a href="/studyroom"><button className="mt-2 bg-blue-700 text-white font-semibold text-xl py-2 px-4 rounded-xl">Join Now</button></a>
+            <a href="/studyroom" target="_blank"><button className="mt-2 bg-blue-700 text-white font-semibold text-xl py-2 px-4 rounded-xl">Join Now</button></a>
           </div>
-          <div className="bg-white p-5 rounded-xl shadow-md mb-4 flex flex-col text-center gap-2 w-[350px]">
-            <h3 className="text-xl text-blue-700 font-bold">Tech Updates</h3>
+          <div className="bg-white p-6 rounded-xl shadow-md mb-4 flex flex-col text-center gap-2 w-[350px]">
+            <h3 className="text-xl text-blue-700 font-bold pb-3">Tech Updates</h3>
             <p className="text-pretty text-lg font-semibold text-green-700">Stay updated with all recent tech news!</p>
             <div className="text-left">
               {news.map((article, index) => (
@@ -139,12 +139,12 @@ const Home= () => {
           <div className="bg-white px-4 py-7 rounded-xl shadow-md mb-4 flex flex-col text-center gap-2 w-[350px]">
             <h3 className="text-xl text-blue-700 font-bold">Pomodoro</h3>
             <p className="text-pretty text-lg font-semibold text-green-700">Stay Focused! Achieve your goals!</p>
-            <a href="/progress"><button className="mt-2 bg-blue-700 text-white font-semibold text-xl py-2 px-4 rounded-xl">Start Now</button></a>
+            <a href="/progress" target="_blank"><button className="mt-2 bg-blue-700 text-white font-semibold text-xl py-2 px-4 rounded-xl">Start Now</button></a>
           </div>
           <div className="bg-white p-4 rounded-xl shadow-md mb-4 flex flex-col text-center gap-2 w-[350px]">
             <h3 className="text-xl text-blue-700 font-bold">Resources</h3>
             <p className="text-pretty text-lg font-semibold text-green-700">Check out all required notes, ppts and previous papers</p>
-            <a href="/resources"><button className="mt-2 bg-blue-700 text-white font-semibold text-xl py-2 px-4 rounded-xl">Check It Out</button></a>
+            <a href="/resources" target="_blank"><button className="mt-2 bg-blue-700 text-white font-semibold text-xl py-2 px-4 rounded-xl">Check It Out</button></a>
           </div>
         </div>
       </div>
